@@ -13,5 +13,8 @@ alias vimrc="vim ~/.vimrc"
 
 alias devstart="dev; yarn dev:start"
 alias mobstart="mob; MOBILE_WEB_PORT=4000 NODE_ENV=development npm run dev -- -p $PORT"
+
 alias stashit="git add . && git stash"
+alias unstageall="git checkout -- ."
+
 source ~/.bashrc
