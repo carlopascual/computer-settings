@@ -1,10 +1,7 @@
 {
   "window.zoomLevel": -1,
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Railgun",
-  "eslint.options": {
-    // "configFile": ".eslintrc.js"
-  },
+  "workbench.colorTheme": "An Old Hope Classic",
   "eslint.validate": [
     "javascript",
     "javascriptreact"
@@ -13,7 +10,8 @@
     "*Dockerfile*": "dockerfile",
     "*.cssx": "javascript",
     "*.js": "javascriptreact",
-    ".env": "dotenv"
+    ".env": "dotenv",
+    "*.heml": "html"
   },
   "files.autoSave": "onFocusChange",
   "files.exclude": {
@@ -31,14 +29,35 @@
     "**/dump": false
   },
   "editor.formatOnSave": true,
+  "eslint.autoFixOnSave": true,
+  "editor.tabSize": 2,
   "saveAndRun": {
     "commands": [
       {
-        "match": "@quadric/[^/]*/src/.*\\.js$",
-        "cmd": "cd ${fileDirname} && cd .. && npm run build"
+        "match": "packages/[^/]*/src/.*\\.js$",
+        "cmd": "jake pkg:*:build"
       }
     ]
   },
   "material-icon-theme.showUpdateMessage": false,
-  "prettier.eslintIntegration": true
+  "prettier.eslintIntegration": true,
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressResultsExplorerNotice": false,
+    "suppressShowKeyBindingsNotice": true,
+    "suppressUpdateNotice": true,
+    "suppressWelcomeNotice": false
+  },
+  "git.enableSmartCommit": true,
+  "gitlens.keymap": "alternate",
+  "prettier.singleQuote": true,
+  "gitlens.historyExplorer.enabled": true,
+  "material-icon-theme.folders.theme": "classic",
+  "materialTheme.fixIconsRunning": false,
+  "vscode-json-editor.theme": "dark"
 }
